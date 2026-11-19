@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI: all 55 trophies, offline tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 GTA VI PlayStation 5 trophies: checklist, roadmap to the platinum, missable flags, and a cited guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-title">
+    <h1>Leonida Trophy Guide</h1>
+    <p class="sub">Grand Theft Auto VI &middot; all 55 PlayStation 5 trophies &middot; guide + tracker &middot; works offline</p>
+  </div>
+  <div class="totals" id="totals">55 trophies &middot; 1 Platinum &middot; 2 Gold &middot; 6 Silver &middot; 46 Bronze &middot; 28 hidden</div>
+</header>
+
+<section class="progress" id="progress-card" aria-label="Your progress">
+  <div class="progress-head">
+    <strong id="progress-text">0 of 55 earned</strong>
+    <span id="progress-pct">0%</span>
+  </div>
+  <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="bar"><div class="bar-fill" id="bar-fill" style="width:0%"></div></div>
+  <div class="grade-counts" id="grade-counts"></div>
+  <p class="hint">Tick a trophy when it pops — progress saves in this browser. Export it to keep a backup, import it on another machine.</p>
+  <p class="nextup" id="nextup"></p>
+</section>
+
+<section class="roadmap" id="roadmap" aria-label="Roadmap to the Platinum">
+  <h2>Roadmap to the Platinum &mdash; about 200 hours, one playthrough</h2>
+  <p class="roadmap-intro">Three stages, in order. Nothing is missable except the one trophy flagged below, and there is no mission replay and no New Game Plus — so take optional missions and character quests as they appear, and keep a manual save at the start of every chapter.</p>
+  <ol class="steps" id="roadmap-steps"></ol>
+  <h3>The 100% completion checklist (for A Long Road)</h3>
+  <table class="hundred">
+    <thead><tr><th>What counts</th><th>Needed</th><th>Feeds which trophies</th></tr></thead>
+    <tbody>
+      <tr><td>Story missions</td><td>All</td><td>Just Like Paradise &hellip; You Gotta Know When to Get Off</td></tr>
+      <tr><td>Optional missions</td><td>100</td><td>Strangers &amp; Freaks, side stories</td></tr>
+      <tr><td>Vehicle scans (WAiNK)</td><td>200 of 277</td><td>Whip It Good, You WAiNKer!</td></tr>
+      <tr><td>Animal studies (binoculars)</td><td>100 of 255</td><td>Fair Game</td></tr>
+      <tr><td>Meditations</td><td>15 of 18</td><td>Positive Mental Attitude</td></tr>
+      <tr><td>Challenges</td><td>70 of 80</td><td>One Last Thing</td></tr>
+      <tr><td>Stunts</td><td>300</td><td>Cunning Stunts</td></tr>
+      <tr><td>WAiNK scans</td><td>100</td><td>You WAiNKer!</td></tr>
+      <tr><td>Shooting Range gold medals</td><td>All 42</td><td>The Shootist</td></tr>
+      <tr><td>Bank vaults, robberies, gang operations</td><td>All</td><td>Maximum Withdrawal, Pest Control</td></tr>
+      <tr><td>Drone races, Target Decks, underwater finds</td><td>All</td><td>Top Fun, Don&rsquo;t Touch My Deck</td></tr>
+    </tbody>
+  </table>
+  <div class="missable-box" id="missable-box">
+    <strong>&#9888; The one possibly missable trophy: Positive Mental Attitude.</strong>
+    In Chapter 1, the morning after Down to Earth, follow Lucia from the kitchen to the balcony and accept her meditation. It is gone after Chapter 1, and it is not confirmed yet whether the trophy needs it — do it anyway. Everything else can be done after the story. Cheats switch trophies and saving off.
+  </div>
+</section>
+
+<div class="layout">
+  <div class="checklist-col">
+    <section class="controls" id="controls" aria-label="Filters">
+      <label class="search">Search <input id="q" type="search" placeholder="trophy name, mission, place&hellip;" autocomplete="off"></label>
+      <label>Kind <select id="kind">
+        <option value="all">All kinds</option>
+        <option value="story">Story</option>
+        <option value="side">Side stories</option>
+        <option value="activities">Activities</option>
+        <option value="collectibles">Collectibles</option>
+        <option value="robberies">Robberies</option>
+        <option value="combat">Combat</option>
+        <option value="money">Money &amp; property</option>
+        <option value="exploration">Exploration</option>
+        <option value="secrets">Odd jobs &amp; secrets</option>
+        <option value="platinum">Platinum &amp; 100%</option>
+      </select></label>
+      <label>Grade <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select></label>
+      <label>Status <select id="status">
+        <option value="all">All</option>
+        <option value="earned">Earned</option>
+        <option value="remaining">Remaining</option>
+      </select></label>
+      <label class="check"><input id="missable-only" type="checkbox"> Missable only</label>
+      <label class="check"><input id="spoilers" type="checkbox"> Show story spoilers</label>
+      <button id="export" type="button">Export progress</button>
+      <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+      <button id="reset" type="button">Reset</button>
+    </section>
+    <p class="showing" id="showing">Showing 55 of 55 trophies</p>
+    <main id="checklist" aria-label="Trophy checklist"></main>
+  </div>
+  <aside class="detail" id="detail" aria-label="Trophy guide detail">
+    <p class="detail-empty">Pick a trophy in the list to see its guide, sources and your notes here.</p>
+  </aside>
+</div>
+
+<footer>
+  <h2>Sources &amp; how this guide is written</h2>
+  <p>Names, descriptions and grades are the official PlayStation list, frozen 18 Nov 2026 and cross-checked against Exophase, PSNProfiles, GTABase, Output Lag and PowerPyx — all agree on all 55. Every guide is this entry&rsquo;s own words; it draws on the sources named beside each trophy and never copies their text. Five hidden trophies have no confirmed unlock method at launch (In The Beginning&hellip;, Capital Offense, Bad Luck, I Guess, The Truth Is Out There, Ten Pin); their guides say so plainly instead of guessing. Two more (Strangers &amp; Freaks, Fair Game) are partly unconfirmed.</p>
+  <ul class="sources" id="sources"></ul>
+  <p class="fineprint">Unofficial fan guide. Not affiliated with Rockstar Games or PlayStation. No Rockstar logo, artwork or game imagery is used anywhere in this guide. Progress is stored only in your browser (localStorage); nothing is sent anywhere.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
